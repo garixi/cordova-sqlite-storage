@@ -321,6 +321,10 @@ public class SQLitePlugin extends CordovaPlugin {
 
             this.q = new LinkedBlockingQueue<DBQuery>();
             this.openCbc = cbc;
+            if (Build.VERSION.SDK_INT >= 30) {
+                Log.v(SQLitePlugin.class.getSimpleName(), "Applying hotfix for Android 11+");
+                this.oldImpl = true;
+            }
         }
 
         public void run() {
