@@ -5,7 +5,7 @@
  */
 
 package io.sqlc;
-
+import android.os.Build;
 import android.util.Log;
 
 import java.io.File;
